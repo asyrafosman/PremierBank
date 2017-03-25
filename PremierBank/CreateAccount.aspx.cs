@@ -23,8 +23,13 @@ namespace PremierBank
         {
             Session["Name"] = txtName.Text;
             Session["IC"] = txtIC.Text;
-            Session["Address"] = txtAddress.Text;
             Session["Gender"] = rblGender.SelectedItem;
+            Session["Race"] = rblRace.SelectedItem;
+            Session["Address"] = txtAddress.Text;
+            Session["State"] = ddlState.SelectedItem;
+            Session["Poscode"] = txtPoscode.Text;
+            Session["Phone"] = txtPhone.Text;
+            Session["Email"] = txtEmail.Text;
             Session["AccType"] = rblAccount.SelectedItem;
             Response.Redirect("RegisterOnline.aspx");
         }
