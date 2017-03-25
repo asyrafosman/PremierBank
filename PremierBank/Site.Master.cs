@@ -16,5 +16,16 @@ namespace PremierBank
                 Session["Amount"] = 1000.00;
             }
         }
+
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("Login.aspx");
+        }
+
+        protected void btnLogout_Click(object sender, EventArgs e)
+        {
+            Session.Clear();
+            Response.Redirect("Default.aspx");
+        }
     }
 }

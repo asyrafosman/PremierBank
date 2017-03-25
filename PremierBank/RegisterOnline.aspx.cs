@@ -82,7 +82,7 @@ namespace PremierBank
                     cmd.Parameters.Add(new SqlParameter("AccNum", accNum));
                     cmd.Parameters.Add(new SqlParameter("AccTypeId", Session["AccType"].ToString()));
                     cmd.Parameters.Add(new SqlParameter("CustIc", Session["IC"].ToString()));
-                    cmd.Parameters.Add(new SqlParameter("AccBalance", 500));
+                    cmd.Parameters.Add(new SqlParameter("AccBalance", 50000));
                     cmd.Parameters.Add(new SqlParameter("Username", txtUsername.Text));
                     cmd.Parameters.Add(new SqlParameter("Password", txtPassword.Text));
                     cmd.Connection = conn;
