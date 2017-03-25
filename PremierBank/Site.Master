@@ -28,11 +28,28 @@
                                 <span class="icon-bar"></span>
                                 <span class="icon-bar"></span>
                             </button>
-                            <a class="navbar-brand" href="Default.aspx">Premier Bank</a>
+                            <a class="navbar-brand">Premier Bank</a>
                         </div>
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                            <asp:Panel ID="Panel3" runat="server">
+                                <ul class="nav navbar-nav">
+                                    <li><a href="Default.aspx">Home</a></li>
+                                    <li><a href="CreateAccount.aspx">Create Account</a></li>
+                                </ul>
+                            </asp:Panel>
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#">Login</a></li>
+                                <asp:Panel ID="Panel1" runat="server">
+                                    <li>
+                                        <a>
+                                            <asp:Button ID="btnLogin" runat="server" Text="Login" class="btn btn-primary" /></a>
+                                    </li>
+                                </asp:Panel>
+                                <asp:Panel ID="Panel2" runat="server" Visible="False">
+                                    <li>
+                                        <a>
+                                            <asp:Button ID="btnLogout" runat="server" Text="Logout" class="btn btn-danger" /></a>
+                                    </li>
+                                </asp:Panel>
                             </ul>
                         </div>
                     </div>
@@ -43,7 +60,7 @@
                 </asp:ContentPlaceHolder>
                 <hr />
                 <footer>
-                    <p>&copy; <%: DateTime.Now.Year %> - Premier Bank</p>
+                    <p>&copy; <%: DateTime.Now.Year %> Premier Bank. All rights reserved.</p>
                 </footer>
             </div>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
