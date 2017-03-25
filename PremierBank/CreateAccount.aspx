@@ -23,7 +23,7 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-lg-12"></div>
+            <div class="col-lg-12"><p></p></div>
         </div>
         <div class="form-group">
             <label for="inputName" class="col-lg-2 control-label">I/C Number</label>
@@ -36,7 +36,7 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-lg-12"></div>
+            <div class="col-lg-12"><p></p></div>
         </div>
         <div class="form-group">
             <label class="col-lg-2 control-label">Gender</label>
@@ -55,7 +55,7 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-lg-12"></div>
+            <div class="col-lg-12"><p></p></div>
         </div>
         <div class="form-group">
             <label class="col-lg-2 control-label">Race</label>
@@ -76,7 +76,7 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-lg-12"></div>
+            <div class="col-lg-12"><p></p></div>
         </div>
         <div class="form-group">
             <label for="textArea" class="col-lg-2 control-label">Address</label>
@@ -88,7 +88,7 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-lg-12"></div>
+            <div class="col-lg-12"><p></p></div>
         </div>
         <div class="form-group">
             <label for="textArea" class="col-lg-2 control-label">State</label>
@@ -116,7 +116,7 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-lg-12"></div>
+            <div class="col-lg-12"><p></p></div>
         </div>
         <div class="form-group">
             <label for="inputName" class="col-lg-2 control-label">Poscode</label>
@@ -128,7 +128,7 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-lg-12"></div>
+            <div class="col-lg-12"><p></p></div>
         </div>
         <div class="form-group">
             <label for="inputName" class="col-lg-2 control-label">Phone Number</label>
@@ -140,7 +140,7 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-lg-12"></div>
+            <div class="col-lg-12"><p></p></div>
         </div>
         <div class="form-group">
             <label for="inputName" class="col-lg-2 control-label">Email</label>
@@ -152,7 +152,7 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-lg-12"></div>
+            <div class="col-lg-12"><p></p></div>
         </div>
         <div class="form-group">
             <label class="col-lg-2 control-label">Account Type</label>
@@ -169,7 +169,7 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-lg-12"></div>
+            <div class="col-lg-12"><p></p></div>
         </div>
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
