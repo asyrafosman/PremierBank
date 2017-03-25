@@ -30,7 +30,7 @@ namespace PremierBank
             Session["Poscode"] = txtPoscode.Text;
             Session["Phone"] = txtPhone.Text;
             Session["Email"] = txtEmail.Text;
-            Session["AccType"] = rblAccount.SelectedItem;
+            Session["AccType"] = rblAccount.SelectedValue;
             Response.Redirect("RegisterOnline.aspx");
         }
     }

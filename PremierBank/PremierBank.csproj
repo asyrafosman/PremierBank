@@ -65,6 +65,7 @@
     <Content Include="CreateAccount.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="DepositMoney.aspx" />
+    <Content Include="Login.aspx" />
     <Content Include="WithdrawMoney.aspx" />
     <Content Include="RegisterOnline.aspx" />
     <Content Include="TransferMoney.aspx" />
@@ -99,6 +100,13 @@
     </Compile>
     <Compile Include="DepositMoney.aspx.designer.cs">
       <DependentUpon>DepositMoney.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WithdrawMoney.aspx.cs">

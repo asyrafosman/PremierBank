@@ -19,7 +19,7 @@
             </div>
             <div class="col-lg-3">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter your name" ControlToValidate="txtName" ForeColor="Red"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Invalid Name" ControlToValidate="txtName" ValidationExpression="^[a-zA-Z]{10-30}&" ForeColor="Red"></asp:RegularExpressionValidator>
+                <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Invalid Name" ControlToValidate="txtName" ValidationExpression="^[a-zA-Z]{10-30}&" ForeColor="Red"></asp:RegularExpressionValidator>--%>
             </div>
         </div>
         <div class="form-group">
@@ -32,7 +32,7 @@
             </div>
             <div class="col-lg-3">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter your IC" ControlToValidate="txtIC" ForeColor="Red"></asp:RequiredFieldValidator>
-                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Invalid IC" ControlToValidate="txtIC" ValidationExpression="^[0-9]{12}&" ForeColor="Red"></asp:RegularExpressionValidator>
+                <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Invalid IC" ControlToValidate="txtIC" ValidationExpression="^[0-9]{12}&" ForeColor="Red"></asp:RegularExpressionValidator>--%>
             </div>
         </div>
         <div class="form-group">
