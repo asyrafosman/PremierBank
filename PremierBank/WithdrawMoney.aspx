@@ -40,7 +40,6 @@
             <div class="col-lg-7">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter your amount" ControlToValidate="txtAmount" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Invalid amount" ControlToValidate="txtAmount" MinimumValue="50" MaximumValue="5000" ForeColor="Red"></asp:RangeValidator>
-            </div>
         </div>
         <div class="form-group">
             <div class="col-lg-12"><p></p></div>
