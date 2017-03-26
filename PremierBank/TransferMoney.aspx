@@ -53,12 +53,10 @@
                 <div class="input-group">
                     <span class="input-group-addon">RM</span>
                     <asp:TextBox ID="txtAmount" runat="server" class="form-control" placeholder="Transfer amount"></asp:TextBox>
-                </div>
+                </div>      
             </div>
-            <div class="col-lg-3">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter amount" ForeColor="Red" ControlToValidate="txtAmount"></asp:RequiredFieldValidator>
-                <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Invalid amount" ControlToValidate="txtAmount" MinimumValue="50" MaximumValue="5000" ForeColor="Red"></asp:RangeValidator>
-            </div>
+                <asp:RangeValidator ID="RangeValidator1" runat="server" Display="Dynamic" ErrorMessage="Invalid amount" ControlToValidate="txtAmount" Type ="Integer" MinimumValue="50" MaximumValue="500" ForeColor="Red"></asp:RangeValidator>
         </div>
         <div class="form-group">
             <div class="col-lg-12"><p></p></div>
