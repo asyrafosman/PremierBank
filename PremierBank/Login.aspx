@@ -13,7 +13,16 @@
     <fieldset>
         <legend>Login to Bank Account</legend>
         <asp:Panel ID="Panel1" runat="server" Visible="False">
-
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="alert alert-dismissible alert-danger">
+                        <button type="button" class="close" data-dismiss="alert">&times;</button>
+                        <h4>Wrong username/password!</h4>
+                        <p>Please enter the right username and password.</p>
+                        <p>If you don't have account, please <a href="CreateAccount.aspx" class="alert-link">create new account</a>.</p>
+                    </div>
+                </div>
+            </div>
         </asp:Panel>
         <div class="form-group">
             <label for="inputName" class="col-lg-2 control-label">Username</label>
