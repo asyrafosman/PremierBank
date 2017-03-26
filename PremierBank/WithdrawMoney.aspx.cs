@@ -48,7 +48,7 @@ namespace PremierBank
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = insert;
             cmd.Parameters.Add(new SqlParameter("AccNum", Session["AccNum"]));
-            cmd.Parameters.Add(new SqlParameter("TxTime", Convert.ToDateTime(DateTime.Now.ToLongDateString())));
+            cmd.Parameters.Add(new SqlParameter("TxTime", Convert.ToDateTime(DateTime.Now)));
             cmd.Parameters.Add(new SqlParameter("TxAmount", 0-amount));
             cmd.Parameters.Add(new SqlParameter("TxBalance", balance));
             cmd.Parameters.Add(new SqlParameter("TxDescription", "Withdraw money"));

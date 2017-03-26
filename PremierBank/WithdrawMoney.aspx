@@ -40,15 +40,17 @@
             <div class="col-lg-7">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter your amount" ControlToValidate="txtAmount" ForeColor="Red"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Invalid amount" ControlToValidate="txtAmount" MinimumValue="50" MaximumValue="5000" ForeColor="Red"></asp:RangeValidator>
-        </div>
-        <div class="form-group">
-            <div class="col-lg-12"><p></p></div>
-        </div>
-        <div class="form-group">
-            <div class="col-lg-10 col-lg-offset-2">
-                <asp:Button ID="btnCancel" runat="server" Text="Cancel" class="btn btn-default" CausesValidation="False" OnClick="btnCancel_Click" />
-                <asp:Button ID="btnSubmit" runat="server" Text="Withdraw" class="btn btn-primary" OnClick="btnSubmit_Click"/>
             </div>
-        </div>
+            <div class="form-group">
+                <div class="col-lg-12">
+                    <p></p>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-lg-10 col-lg-offset-2">
+                    <asp:Button ID="btnCancel" runat="server" Text="Cancel" class="btn btn-default" CausesValidation="False" OnClick="btnCancel_Click" />
+                    <asp:Button ID="btnSubmit" runat="server" Text="Withdraw" class="btn btn-primary" OnClick="btnSubmit_Click" />
+                </div>
+            </div>
     </fieldset>
 </asp:Content>

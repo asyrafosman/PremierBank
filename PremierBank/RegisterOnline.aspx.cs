@@ -94,7 +94,7 @@ namespace PremierBank
                             " Values(@AccNum, @TxTime, @TxAmount, @TxBalance, @TxDescription) ";
                     cmd.CommandText = insert;
                     cmd.Parameters.Add(new SqlParameter("AccNum", accNum));
-                    cmd.Parameters.Add(new SqlParameter("TxTime", Convert.ToDateTime(DateTime.Now.ToLongDateString())));
+                    cmd.Parameters.Add(new SqlParameter("TxTime", Convert.ToDateTime(DateTime.Now)));
                     cmd.Parameters.Add(new SqlParameter("TxAmount", 50000));
                     cmd.Parameters.Add(new SqlParameter("TxBalance", 50000));
                     cmd.Parameters.Add(new SqlParameter("TxDescription", "Create new account"));

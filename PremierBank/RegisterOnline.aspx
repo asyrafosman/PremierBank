@@ -43,7 +43,7 @@
             </div>
             <div class="col-lg-5">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please enter your password" ControlToValidate="txtPassword2" ForeColor="Red"></asp:RequiredFieldValidator>
-                <%--<asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Invalid password" ValueToCompare="txtPassword" ControlToValidate="txtPassword2" ForeColor="Red" Operator="Equal" Type="String"></asp:CompareValidator>--%>
+                <asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Password not match" ControlToValidate="txtPassword2" ForeColor="Red" Operator="Equal" Type="String" ControlToCompare="txtPassword"></asp:CompareValidator>
             </div>
         </div>
         <div class="form-group">

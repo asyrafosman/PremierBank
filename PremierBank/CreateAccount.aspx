@@ -19,7 +19,7 @@
             </div>
             <div class="col-lg-3">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter your name" ControlToValidate="txtName" ForeColor="Red"></asp:RequiredFieldValidator>
-                <%--<asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Invalid Name" ControlToValidate="txtName" ValidationExpression="^[a-zA-Z]{10-30}&" ForeColor="Red"></asp:RegularExpressionValidator>--%>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" ErrorMessage="Invalid Name" ControlToValidate="txtName" ValidationExpression="^[a-zA-Z''-'\s]{1,40}$" ForeColor="Red"></asp:RegularExpressionValidator>
             </div>
         </div>
         <div class="form-group">
@@ -125,6 +125,7 @@
             </div>
             <div class="col-lg-3">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator7" runat="server" ErrorMessage="Please enter your poscode" ControlToValidate="txtPoscode" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator2" runat="server" ErrorMessage="Invalid poscode" ValidationExpression="^(\d{5}-\d{4}|\d{5}|\d{9})$|^([a-zA-Z]\d[a-zA-Z] \d[a-zA-Z]\d)$" ForeColor="Red" ControlToValidate="txtPoscode"></asp:RegularExpressionValidator>
             </div>
         </div>
         <div class="form-group">
@@ -149,6 +150,7 @@
             </div>
             <div class="col-lg-3">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator9" runat="server" ErrorMessage="Please enter your email" ControlToValidate="txtEmail" ForeColor="Red"></asp:RequiredFieldValidator>
+                <asp:RegularExpressionValidator ID="RegularExpressionValidator3" runat="server" ErrorMessage="Invalid email" ForeColor="Red" ValidationExpression="^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$" ControlToValidate="txtEmail"></asp:RegularExpressionValidator>
             </div>
         </div>
         <div class="form-group">

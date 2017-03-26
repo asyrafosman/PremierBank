@@ -10,7 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css">
         .auto-style1 {
-            width: 240px
+            width: 200px
         }
     </style>
 </asp:Content>
@@ -48,11 +48,21 @@
             </tr>
         </table>
         <br />
-        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CssClass="table table-striped table-hover">
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1" CssClass="table table-striped table-hover" PagerStyle-CssClass="pagination" BorderStyle="None">
             <Columns>
-                <asp:BoundField DataField="TxTime" HeaderText="Transaction Time" SortExpression="TxTime" />
-                <asp:BoundField DataField="TxAmount" HeaderText="Amount" SortExpression="TxAmount" />
-                <asp:BoundField DataField="TxBalance" HeaderText="Account Balance" SortExpression="TxBalance" />
+                <asp:BoundField DataField="TxTime" HeaderText="Transaction Time" SortExpression="TxTime" DataFormatString="{0:F}" />
+                <%--<asp:BoundField DataField="TxAmount" HeaderText="Amount" SortExpression="TxAmount" DataFormatString="{0:C}" />--%>
+                <asp:TemplateField HeaderText="Amount">
+                    <ItemTemplate>
+                        <%#String.Format("{0:C}",Convert.ToDouble(Eval("TxAmount"))/100)%>
+                    </ItemTemplate>
+                </asp:TemplateField>
+                <%--<asp:BoundField DataField="TxBalance" HeaderText="Account Balance" SortExpression="TxBalance" DataFormatString="{0:C}" />--%>
+                <asp:TemplateField HeaderText="Account Balance">
+                    <ItemTemplate>
+                        <%#String.Format("{0:C}",Convert.ToDouble(Eval("TxBalance"))/100)%>
+                    </ItemTemplate>
+                </asp:TemplateField>
                 <asp:BoundField DataField="TxDescription" HeaderText="Transaction Description" SortExpression="TxDescription" />
             </Columns>
             <PagerStyle CssClass="pagination" />
