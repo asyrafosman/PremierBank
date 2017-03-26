@@ -19,5 +19,88 @@
             <li class="active"><a>Buy Online</a></li>
         </ul>
     </nav>
-    
+    <fieldset>
+        <legend>Buy Online</legend>
+        <div class="form-group">
+                <label for="inputName" class="col-lg-2 control-label">From Account</label>
+            <div class="col-lg-7">
+                
+                <asp:TextBox ID="txtAccNo" runat="server" class="form-control" placeholder="Own Account number"></asp:TextBox>
+            </div>
+            <div class="col-lg-3">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter account number" ForeColor="Red" ControlToValidate="txtAccNo" InitialValue="0"></asp:RequiredFieldValidator>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-12"><p></p></div>
+        </div>
+        <div class="form-group">
+            <label for="inputName" class="col-lg-2 control-label">Service Provider</label>
+            <div class="col-lg-7">
+                <asp:DropDownList ID="ddlservice" runat="server" class="form-control" ControlToValidate="ddlservice">
+                    <asp:ListItem Value="0">Please select service provider</asp:ListItem>
+                    <asp:ListItem>Celcom</asp:ListItem>
+                    <asp:ListItem>Maxis</asp:ListItem>
+                    <asp:ListItem>TuneTalk</asp:ListItem>
+                    <asp:ListItem>OneXOX</asp:ListItem>
+                    <asp:ListItem>Digi</asp:ListItem>
+                    <asp:ListItem>U-Mobile</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div class="col-lg-3">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please select service provider" ForeColor="Red" ControlToValidate="ddlservice" InitialValue="0"></asp:RequiredFieldValidator>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-12"><p></p></div>
+        </div>
+        <div class="form-group">
+            <label for="inputName" class="col-lg-2 control-label">Method of Reload</label>
+            <div class="col-lg-7">
+                <asp:DropDownList ID="ddlmethod" runat="server" class="form-control" ControlToValidate="ddlmethod">
+                    <asp:ListItem Value="0">Please select reload method</asp:ListItem>
+                    <asp:ListItem>Auto Top-Up</asp:ListItem>
+                    <asp:ListItem>With PIN</asp:ListItem>
+                </asp:DropDownList>
+            </div>
+            <div class="col-lg-3">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Please select reload method" ForeColor="Red" ControlToValidate="ddlmethod" InitialValue="0"></asp:RequiredFieldValidator>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-12"><p></p></div>
+        </div>
+        <div class="form-group">
+            <label for="inputName" class="col-lg-2 control-label">Amount</label>
+            <div class="col-lg-7">
+                <div class="input-group">
+                    <span class="input-group-addon">RM</span>
+                    <asp:DropDownList ID="ddlamount" runat="server" class="form-control" ControlToValidate="ddlamount">
+                        <asp:ListItem Value="0">Please select reload amount</asp:ListItem>
+                        <asp:ListItem>5</asp:ListItem>
+                        <asp:ListItem>10</asp:ListItem>
+                        <asp:ListItem>20</asp:ListItem>
+                        <asp:ListItem>50</asp:ListItem>
+                        <asp:ListItem>100</asp:ListItem>
+                    </asp:DropDownList>
+                </div>
+            </div>
+            <div class="col-lg-3">
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter amount" ForeColor="Red" ControlToValidate="ddlamount"></asp:RequiredFieldValidator>
+                
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-12"><p></p></div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-12"><p></p></div>
+        </div>
+        <div class="form-group">
+            <div class="col-lg-10 col-lg-offset-2">
+                <asp:Button ID="btnCancel" runat="server" Text="Cancel" class="btn btn-default" CausesValidation="False" />
+                <asp:Button ID="btnSubmit" runat="server" Text="Purchase" class="btn btn-primary" />
+            </div>
+        </div>
+    </fieldset>
 </asp:Content>
