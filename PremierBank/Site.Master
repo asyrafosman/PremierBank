@@ -31,21 +31,21 @@
                             <a class="navbar-brand" href="">Premier Bank</a>
                         </div>
                         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                            <asp:Panel ID="Panel3" runat="server">
+                            <asp:Panel ID="pnlNavBar" runat="server">
                                 <ul class="nav navbar-nav">
                                     <li><a href="Default.aspx">Home</a></li>
                                     <li><a href="CreateAccount.aspx">Create Account</a></li>
                                 </ul>
                             </asp:Panel>
                             <ul class="nav navbar-nav navbar-right">
-                                <asp:Panel ID="Panel1" runat="server">
+                                <asp:Panel ID="pnlLogin" runat="server">
                                     <li>
-                                        <a><asp:Button ID="btnLogin" runat="server" Text="Login" class="btn btn-primary" OnClick="btnLogin_Click" /></a>
+                                        <a><asp:Button ID="btnLogin" runat="server" Text="Login" class="btn btn-primary" OnClick="btnLogin_Click" CausesValidation="False" /></a>
                                     </li>
                                 </asp:Panel>
-                                <asp:Panel ID="Panel2" runat="server" Visible="False">
+                                <asp:Panel ID="pnlLogout" runat="server" Visible="False">
                                     <li>
-                                        <a><asp:Button ID="btnLogout" runat="server" Text="Logout" class="btn btn-danger" OnClick="btnLogout_Click" /></a>
+                                        <a><asp:Button ID="btnLogout" runat="server" Text="Logout" class="btn btn-danger" OnClick="btnLogout_Click" CausesValidation="False" /></a>
                                     </li>
                                 </asp:Panel>
                             </ul>

@@ -31,22 +31,22 @@ namespace PremierBank {
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
         
         /// <summary>
-        /// Panel3 control.
+        /// pnlNavBar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel3;
+        protected global::System.Web.UI.WebControls.Panel pnlNavBar;
         
         /// <summary>
-        /// Panel1 control.
+        /// pnlLogin control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel1;
+        protected global::System.Web.UI.WebControls.Panel pnlLogin;
         
         /// <summary>
         /// btnLogin control.
@@ -58,13 +58,13 @@ namespace PremierBank {
         protected global::System.Web.UI.WebControls.Button btnLogin;
         
         /// <summary>
-        /// Panel2 control.
+        /// pnlLogout control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Panel Panel2;
+        protected global::System.Web.UI.WebControls.Panel pnlLogout;
         
         /// <summary>
         /// btnLogout control.

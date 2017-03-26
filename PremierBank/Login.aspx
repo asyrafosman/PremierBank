@@ -1,4 +1,5 @@
 ﻿<%@ Page Title="Premier Bank" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Login.aspx.cs" Inherits="PremierBank.Login" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -24,7 +25,9 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-lg-12"><p></p></div>
+            <div class="col-lg-12">
+                <p></p>
+            </div>
         </div>
         <div class="form-group">
             <label for="inputName" class="col-lg-2 control-label">Password</label>
@@ -36,12 +39,14 @@
             </div>
         </div>
         <div class="form-group">
-            <div class="col-lg-12"><p></p></div>
+            <div class="col-lg-12">
+                <p></p>
+            </div>
         </div>
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
-                <asp:Button ID="btnCancel" runat="server" Text="Cancel" class="btn btn-default" OnClick="btnCancel_Click" CausesValidation="False"/>
-                <asp:Button ID="btnSubmit" runat="server" Text="Login" class="btn btn-primary" OnClick="btnSubmit_Click"/>
+                <asp:Button ID="btnCancel" runat="server" Text="Cancel" class="btn btn-default" OnClick="btnCancel_Click" CausesValidation="False" />
+                <asp:Button ID="btnSubmit" runat="server" Text="Login" class="btn btn-primary" OnClick="btnSubmit_Click" />
             </div>
         </div>
     </fieldset>

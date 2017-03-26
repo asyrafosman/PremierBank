@@ -11,9 +11,17 @@ namespace PremierBank
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (Session["Amount"] == null)
+            if (Session["AccNum"] == null)
             {
-                Session["Amount"] = 1000.00;
+                pnlLogin.Visible = true;
+                pnlLogout.Visible = false;
+                pnlNavBar.Visible = true;
+            }
+            else
+            {
+                pnlLogin.Visible = false;
+                pnlLogout.Visible = true;
+                pnlNavBar.Visible = false;
             }
         }
 
@@ -24,7 +32,9 @@ namespace PremierBank
 
         protected void btnLogout_Click(object sender, EventArgs e)
         {
+            Session.Abandon();
             Session.Clear();
+            Session.RemoveAll();
             Response.Redirect("Default.aspx");
         }
     }

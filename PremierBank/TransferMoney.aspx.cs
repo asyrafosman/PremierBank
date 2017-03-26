@@ -11,7 +11,7 @@ namespace PremierBank
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblAmount.Text = string.Format("{0:#,#.##}", Session["Amount"]);
+            lblAmount.Text = string.Format("{0:#,#.##}", Session["AccBalance"]);
         }
 
         protected void btnCancel_Click(object sender, EventArgs e)
@@ -21,9 +21,9 @@ namespace PremierBank
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            float amount = float.Parse(Session["Amount"].ToString());
+            float amount = float.Parse(Session["AccBalance"].ToString());
             amount -= float.Parse(txtAmount.Text);
-            Session["Amount"] = amount;
+            Session["AccBalance"] = amount;
             Response.Redirect("TransferMoney.aspx");
         }
     }

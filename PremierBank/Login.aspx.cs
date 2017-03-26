@@ -18,15 +18,14 @@ namespace PremierBank
 
         protected void btnCancel_Click(object sender, EventArgs e)
         {
+            Session.Abandon();
             Session.Clear();
+            Session.RemoveAll();
             Response.Redirect("Default.aspx");
         }
 
         protected void btnSubmit_Click(object sender, EventArgs e)
         {
-            Session["Username"] = txtUsername.Text;
-            Session["Password"] = txtPassword.Text;
-            
             string connStr = ConfigurationManager.ConnectionStrings["PremierBankCS"].ConnectionString;
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
@@ -34,15 +33,24 @@ namespace PremierBank
                         " WHERE Username = @Username AND Password = @Password ";
             SqlCommand cmd = new SqlCommand();
             cmd.CommandText = login;
-            cmd.Parameters.Add(new SqlParameter("Username", Session["Username"].ToString()));
-            cmd.Parameters.Add(new SqlParameter("Password", Session["Password"].ToString()));
+            cmd.Parameters.Add(new SqlParameter("Username", txtUsername.Text));
+            cmd.Parameters.Add(new SqlParameter("Password", txtPassword.Text));
             cmd.Connection = conn;
+
+            SqlDataReader drUser;
+            drUser = cmd.ExecuteReader();
+            drUser.Read();
+
             try
             {
-                int result = cmd.ExecuteNonQuery();
-                cmd.Parameters.Clear();
-                if(result > 1)
+                if (drUser.HasRows)
                 {
+                    Session["AccNum"] = drUser["AccNum"].ToString();
+                    Session["AccTypeId"] = drUser["AccTypeId"].ToString();
+                    Session["CustIc"] = drUser["CustIc"].ToString();
+                    Session["AccBalance"] = drUser["AccBalance"].ToString();
+                    Session["Username"] = drUser["Username"].ToString();
+                    Session["Password"] = drUser["Password"].ToString();
                     conn.Close();
                     Response.Redirect("ViewDetail.aspx");
                 }

@@ -12,14 +12,27 @@
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <nav class="navbar navbar-default">
         <ul class="nav navbar-nav">
-            <li><a href="TransferMoney.aspx">Transfer Money</a></li>
+            <li class="active"><a href="#">View Detail Info</a></li>
             <li><a href="DepositMoney.aspx">Deposit Money</a></li>
             <li><a href="WithdrawMoney.aspx">Withdraw Money</a></li>
-            <li class="active"><a href="#">View Detail Info</a></li>
+            <li><a href="TransferMoney.aspx">Transfer Money</a></li>
             <li><a href="BuyOnline.aspx">Buy Online</a></li>
         </ul>
     </nav>
-    <div class="progress progress-striped active">
-        <div class="progress-bar" style="width: 45%"></div>
-    </div>
+    <fieldset>
+        <legend>Account Details</legend>
+        <asp:GridView ID="GridView1" runat="server" AllowPaging="True" AutoGenerateColumns="False" DataSourceID="SqlDataSource1">
+            <Columns>
+                <asp:BoundField DataField="TxTime" HeaderText="TxTime" SortExpression="TxTime" />
+                <asp:BoundField DataField="TxAmount" HeaderText="TxAmount" SortExpression="TxAmount" />
+                <asp:BoundField DataField="TxBalance" HeaderText="TxBalance" SortExpression="TxBalance" />
+                <asp:BoundField DataField="TxDescription" HeaderText="TxDescription" SortExpression="TxDescription" />
+            </Columns>
+        </asp:GridView>
+        <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:PremierBankCS %>" SelectCommand="SELECT [TxTime], [TxAmount], [TxBalance], [TxDescription] FROM [Trans] WHERE ([AccNum] = @AccNum) ORDER BY [TxTime] DESC">
+            <SelectParameters>
+                <asp:SessionParameter Name="AccNum" SessionField="AccNum" Type="String" />
+            </SelectParameters>
+        </asp:SqlDataSource>
+    </fieldset>
 </asp:Content>
