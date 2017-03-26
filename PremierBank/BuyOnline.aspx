@@ -19,7 +19,5 @@
             <li class="active"><a>Buy Online</a></li>
         </ul>
     </nav>
-    <div class="progress progress-striped active">
-        <div class="progress-bar" style="width: 45%"></div>
-    </div>
+    
 </asp:Content>
