@@ -11,7 +11,10 @@ namespace PremierBank
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            if (Session["AccNum"] == null)
+            {
+                Response.Redirect("Default.aspx");
+            }
         }
     }
 }
