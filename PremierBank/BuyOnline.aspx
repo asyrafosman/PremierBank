@@ -19,6 +19,14 @@
             <li class="active"><a>Buy Online</a></li>
         </ul>
     </nav>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Available Balance (RM)</h3>
+        </div>
+        <div class="panel-body">
+            <asp:Label ID="lblAmount" runat="server" Text=""></asp:Label>
+        </div>
+    </div>
     <fieldset>
         <legend>Buy Online</legend>
         <div class="form-group">
@@ -99,7 +107,7 @@
         <div class="form-group">
             <div class="col-lg-10 col-lg-offset-2">
                 <asp:Button ID="btnCancel" runat="server" Text="Cancel" class="btn btn-default" CausesValidation="False" />
-                <asp:Button ID="btnSubmit" runat="server" Text="Purchase" class="btn btn-primary" />
+                <asp:Button ID="btnSubmit" runat="server" Text="Purchase" class="btn btn-primary" OnClick="btnSubmit_Click" />
             </div>
         </div>
     </fieldset>

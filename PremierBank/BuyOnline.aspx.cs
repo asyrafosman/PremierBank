@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using System.Configuration;
+using System.Data.SqlClient;
 
 namespace PremierBank
 {
@@ -19,9 +21,37 @@ namespace PremierBank
             {
                 double balance = Convert.ToDouble(Session["AccBalance"].ToString());
                 balance /= 100;
+                lblAmount.Text = string.Format("{0:#,#.##}", balance);
                 txtAccNo.Text = Session["AccNum"].ToString();
                
             }
+        }
+
+        protected void btnSubmit_Click(object sender, EventArgs e)
+        {
+            double amount = Convert.ToDouble(ddlamount.SelectedValue);
+            amount *= 100;
+
+            double balance = Convert.ToDouble(Session["AccBalance"].ToString());
+            balance -= amount;
+            Session["AccBalance"] = balance;
+
+            string connStr = ConfigurationManager.ConnectionStrings["PremierBankCS"].ConnectionString;
+            SqlConnection conn = new SqlConnection(connStr);
+            conn.Open();
+            SqlCommand cmd = new SqlCommand();
+
+            string update = "UPDATE Account SET AccBalance = @AccBalance WHERE AccNum = @AccNum";
+            cmd.CommandText = update;
+            cmd.Parameters.Add(new SqlParameter("AccBalance", balance));
+            cmd.Parameters.Add(new SqlParameter("AccNum", Session["AccNum"]));
+            cmd.Connection = conn;
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.Clear();
+
+            conn.Close();
+
+            Response.Redirect("BuyOnline.aspx");
         }
     }
 }
