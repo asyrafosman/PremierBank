@@ -25,7 +25,7 @@
                 <label for="inputName" class="col-lg-2 control-label">From Account</label>
             <div class="col-lg-7">
                 
-                <asp:TextBox ID="txtAccNo" runat="server" class="form-control" placeholder="Own Account number"></asp:TextBox>
+                <asp:TextBox ID="txtAccNo" runat="server" class="form-control" placeholder="Own Account number" Enabled="False" style="width:635px"></asp:TextBox>
             </div>
             <div class="col-lg-3">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter account number" ForeColor="Red" ControlToValidate="txtAccNo" InitialValue="0"></asp:RequiredFieldValidator>
@@ -75,8 +75,8 @@
             <div class="col-lg-7">
                 <div class="input-group">
                     <span class="input-group-addon">RM</span>
-                    <asp:DropDownList ID="ddlamount" runat="server" class="form-control" ControlToValidate="ddlamount">
-                        <asp:ListItem Value="0">Please select reload amount</asp:ListItem>
+                    <asp:DropDownList ID="ddlamount" runat="server" style="width:175px" class="form-control" ControlToValidate="ddlamount">
+                        <asp:ListItem Value="0">Reload Amount</asp:ListItem>
                         <asp:ListItem>5</asp:ListItem>
                         <asp:ListItem>10</asp:ListItem>
                         <asp:ListItem>20</asp:ListItem>
