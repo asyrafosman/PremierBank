@@ -21,7 +21,7 @@
     </nav>
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title">Available Balance (RM)</h3>
+            <h3 class="panel-title">Available Balance</h3>
         </div>
         <div class="panel-body">
             <asp:Label ID="lblAmount" runat="server" Text=""></asp:Label>
@@ -32,8 +32,7 @@
         <div class="form-group">
                 <label for="inputName" class="col-lg-2 control-label">From Account</label>
             <div class="col-lg-7">
-                
-                <asp:TextBox ID="txtAccNo" runat="server" class="form-control" placeholder="Own Account number" disabled =""></asp:TextBox>
+                <asp:TextBox ID="txtAccNo" runat="server" class="form-control" placeholder="Own Account number" disabled=""></asp:TextBox>
             </div>
             <div class="col-lg-3">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter account number" ForeColor="Red" ControlToValidate="txtAccNo" InitialValue="0"></asp:RequiredFieldValidator>
@@ -95,7 +94,6 @@
             </div>
             <div class="col-lg-3">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter amount" ForeColor="Red" ControlToValidate="ddlamount"></asp:RequiredFieldValidator>
-                
             </div>
         </div>
         <div class="form-group">

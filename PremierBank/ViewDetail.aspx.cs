@@ -19,6 +19,10 @@ namespace PremierBank
             }
             else
             {
+                double balance = Convert.ToDouble(Session["AccBalance"].ToString());
+                balance /= 100;
+                lblAmount.Text = string.Format("RM{0:F2}", balance);
+
                 string connStr = ConfigurationManager.ConnectionStrings["PremierBankCS"].ConnectionString;
                 SqlConnection conn = new SqlConnection(connStr);
                 conn.Open();

@@ -21,9 +21,8 @@ namespace PremierBank
             {
                 double balance = Convert.ToDouble(Session["AccBalance"].ToString());
                 balance /= 100;
-                lblAmount.Text = string.Format("{0:#,#.##}", balance);
+                lblAmount.Text = string.Format("RM{0:F2}", balance);
                 txtAccNo.Text = Session["AccNum"].ToString();
-               
             }
         }
 

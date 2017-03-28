@@ -21,7 +21,7 @@
     </nav>
     <div class="panel panel-primary">
         <div class="panel-heading">
-            <h3 class="panel-title">Available Balance (RM)</h3>
+            <h3 class="panel-title">Available Balance</h3>
         </div>
         <div class="panel-body">
             <asp:Label ID="lblAmount" runat="server" Text=""></asp:Label>

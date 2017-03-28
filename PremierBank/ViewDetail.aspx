@@ -24,9 +24,16 @@
             <li><a href="BuyOnline.aspx">Buy Online</a></li>
         </ul>
     </nav>
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">Available Balance</h3>
+        </div>
+        <div class="panel-body">
+            <asp:Label ID="lblAmount" runat="server" Text=""></asp:Label>
+        </div>
+    </div>
     <fieldset>
         <legend>Account Details</legend>
-        <br />
         <table class="nav-justified">
             <tr>
                 <td class="auto-style1"><b>Account Holder Name</b></td>
@@ -54,13 +61,13 @@
                 <%--<asp:BoundField DataField="TxAmount" HeaderText="Amount" SortExpression="TxAmount" DataFormatString="{0:C}" />--%>
                 <asp:TemplateField HeaderText="Amount">
                     <ItemTemplate>
-                        <%#String.Format("{0:C}",Convert.ToDouble(Eval("TxAmount"))/100)%>
+                        <%#String.Format("RM{0:F2}",Convert.ToDouble(Eval("TxAmount"))/100)%>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <%--<asp:BoundField DataField="TxBalance" HeaderText="Account Balance" SortExpression="TxBalance" DataFormatString="{0:C}" />--%>
                 <asp:TemplateField HeaderText="Account Balance">
                     <ItemTemplate>
-                        <%#String.Format("{0:C}",Convert.ToDouble(Eval("TxBalance"))/100)%>
+                        <%#String.Format("RM{0:F2}",Convert.ToDouble(Eval("TxBalance"))/100)%>
                     </ItemTemplate>
                 </asp:TemplateField>
                 <asp:BoundField DataField="TxDescription" HeaderText="Transaction Description" SortExpression="TxDescription" />
