@@ -33,7 +33,7 @@
                 <label for="inputName" class="col-lg-2 control-label">From Account</label>
             <div class="col-lg-7">
                 
-                <asp:TextBox ID="txtAccNo" runat="server" class="form-control" placeholder="Own Account number" Enabled="False" style="width:635px"></asp:TextBox>
+                <asp:TextBox ID="txtAccNo" runat="server" class="form-control" placeholder="Own Account number" disabled =""></asp:TextBox>
             </div>
             <div class="col-lg-3">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter account number" ForeColor="Red" ControlToValidate="txtAccNo" InitialValue="0"></asp:RequiredFieldValidator>

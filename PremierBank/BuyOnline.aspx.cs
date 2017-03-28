@@ -39,7 +39,20 @@ namespace PremierBank
             string connStr = ConfigurationManager.ConnectionStrings["PremierBankCS"].ConnectionString;
             SqlConnection conn = new SqlConnection(connStr);
             conn.Open();
+            string insert = "INSERT INTO Trans " +
+                            " (AccNum, TxTime, TxAmount, TxBalance, TxDescription) " +
+                            " Values(@AccNum, @TxTime, @TxAmount, @TxBalance, @TxDescription) ";
             SqlCommand cmd = new SqlCommand();
+            cmd.CommandText = insert;
+            cmd.Parameters.Add(new SqlParameter("AccNum", Session["AccNum"]));
+            cmd.Parameters.Add(new SqlParameter("TxTime", Convert.ToDateTime(DateTime.Now)));
+            cmd.Parameters.Add(new SqlParameter("TxAmount", 0 - amount));
+            cmd.Parameters.Add(new SqlParameter("TxBalance", balance));
+            cmd.Parameters.Add(new SqlParameter("TxDescription", "Purchase RM"+ (amount/100) +" Topup on " + ddlservice.SelectedItem + " provider"));
+            cmd.Connection = conn;
+            cmd.ExecuteNonQuery();
+            cmd.Parameters.Clear();
+            
 
             string update = "UPDATE Account SET AccBalance = @AccBalance WHERE AccNum = @AccNum";
             cmd.CommandText = update;
