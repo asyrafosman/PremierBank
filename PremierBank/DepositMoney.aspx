@@ -39,7 +39,7 @@
             </div>
             <div class="col-lg-7">
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter your amount" ControlToValidate="txtAmount" ForeColor="Red"></asp:RequiredFieldValidator>
-                <asp:RangeValidator ID="RangeValidator1" runat="server" ErrorMessage="Invalid amount" ControlToValidate="txtAmount" MinimumValue="10" MaximumValue="9999" ForeColor="Red"></asp:RangeValidator>
+                <asp:RangeValidator ID="RangeValidator1" runat="server" Display="Dynamic" ErrorMessage="Invalid amount" ControlToValidate="txtAmount" Type ="Integer" MinimumValue="10" MaximumValue="9999" ForeColor="Red"></asp:RangeValidator>
             </div>
         </div>
         <div class="form-group">
