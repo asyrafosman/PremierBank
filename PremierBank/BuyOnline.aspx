@@ -35,7 +35,7 @@
                 <asp:TextBox ID="txtAccNo" runat="server" class="form-control" placeholder="Own Account number" disabled=""></asp:TextBox>
             </div>
             <div class="col-lg-3">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter account number" ForeColor="Red" ControlToValidate="txtAccNo" InitialValue="0"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please enter account number" ForeColor="Red" ControlToValidate="txtAccNo" InitialValue="0" Display="Dynamic"></asp:RequiredFieldValidator>
             </div>
         </div>
         <div class="form-group">
@@ -55,7 +55,7 @@
                 </asp:DropDownList>
             </div>
             <div class="col-lg-3">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please select service provider" ForeColor="Red" ControlToValidate="ddlservice" InitialValue="0"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please select service provider" ForeColor="Red" ControlToValidate="ddlservice" InitialValue="0" Display="Dynamic"></asp:RequiredFieldValidator>
             </div>
         </div>
         <div class="form-group">
@@ -71,7 +71,7 @@
                 </asp:DropDownList>
             </div>
             <div class="col-lg-3">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Please select reload method" ForeColor="Red" ControlToValidate="ddlmethod" InitialValue="0"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" ErrorMessage="Please select reload method" ForeColor="Red" ControlToValidate="ddlmethod" InitialValue="0" Display="Dynamic"></asp:RequiredFieldValidator>
             </div>
         </div>
         <div class="form-group">
@@ -93,7 +93,7 @@
                 </div>
             </div>
             <div class="col-lg-3">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter amount" ForeColor="Red" ControlToValidate="ddlamount"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter amount" ForeColor="Red" ControlToValidate="ddlamount" Display="Dynamic"></asp:RequiredFieldValidator>
             </div>
         </div>
         <div class="form-group">

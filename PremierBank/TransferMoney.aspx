@@ -41,7 +41,7 @@
                 </asp:DropDownList>
             </div>
             <div class="col-lg-3">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please select transfer type" ForeColor="Red" ControlToValidate="ddlTransferType" InitialValue="0"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Please select transfer type" ForeColor="Red" ControlToValidate="ddlTransferType" InitialValue="0" Display="Dynamic"></asp:RequiredFieldValidator>
             </div>
         </div>
         <div class="form-group">
@@ -55,7 +55,7 @@
                     <asp:TextBox ID="txtAmount" runat="server" class="form-control" placeholder="Transfer amount"></asp:TextBox>
                 </div>      
             </div>
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter amount" ForeColor="Red" ControlToValidate="txtAmount"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Please enter amount" ForeColor="Red" ControlToValidate="txtAmount" Display="Dynamic"></asp:RequiredFieldValidator>
                 <asp:RangeValidator ID="RangeValidator1" runat="server" Display="Dynamic" ErrorMessage="Invalid amount" ControlToValidate="txtAmount" Type ="Integer" MinimumValue="50" MaximumValue="500" ForeColor="Red"></asp:RangeValidator>
         </div>
         <div class="form-group">
@@ -79,7 +79,7 @@
                 </asp:DropDownList>
             </div>
             <div class="col-lg-3">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please select recipient bank" ForeColor="Red" ControlToValidate="ddlRecipientBank" InitialValue="0"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Please select recipient bank" ForeColor="Red" ControlToValidate="ddlRecipientBank" InitialValue="0" Display="Dynamic"></asp:RequiredFieldValidator>
             </div>
         </div>
         <div class="form-group">
@@ -91,7 +91,7 @@
                 <asp:TextBox ID="txtRepAccNum" runat="server" class="form-control" placeholder="Recipient account number"></asp:TextBox>
             </div>
             <div class="col-lg-3">
-                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Please enter recipient account number" ForeColor="Red" ControlToValidate="txtRepAccNum"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Please enter recipient account number" ForeColor="Red" ControlToValidate="txtRepAccNum" Display="Dynamic"></asp:RequiredFieldValidator>
             </div>
         </div>
         <div class="form-group">
